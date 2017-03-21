@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行走的圆</title>
+</head>
+<body>
+<svg id="mysvg" style="width: 600px; height: 300px; border: 1px solid #000">
+    <circle id="mycircle" cx="100" cy="100" r="30">
+    </circle>
+</svg>
+<script>
+    var svg=document.getElementById('mysvg');
+    var circle=document.getElementById('mycircle');
+    svg.onmousemove=function (event) {
+            var x = event.offsetX;
+            var y = event.offsetY;
+            circle.setAttribute('cx', x);
+            circle.setAttribute('cy', y);
+            //console.log(circle.x,circle.y);
+            circle.setAttribute('fill','yellow');
+    }
+
+</script>
+</body>
+</html>
